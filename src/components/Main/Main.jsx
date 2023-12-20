@@ -1,9 +1,17 @@
-import { Container, Wrapper } from "./Main.styled";
+import CurrencyRow from "../CurrencyRow/CurrencyRow";
+import { Container, FormWrapper, Wrapper } from "./Main.styled";
 
-function Main() {
+function Main({ currencyOptions }) {
   return (
     <Container>
-      <Wrapper>s,fjvnsadjkVNsj/dn</Wrapper>
+      <FormWrapper>
+        <h2>Convert</h2>
+        <Wrapper>
+          <CurrencyRow currencyOptions={currencyOptions} />
+          <div>=</div>
+          <CurrencyRow currencyOptions={currencyOptions} />
+        </Wrapper>
+      </FormWrapper>
     </Container>
   );
 }

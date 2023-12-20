@@ -10,3 +10,5 @@ export async function fetchExchange() {
     console.error("There was a problem with the Axios request", error);
   }
 }
+
+export const allowedCurrencies = ["UAH", "USD", "EUR", "PLN", "GBP", "CZK"];
