@@ -24,7 +24,7 @@ Builds the app for production to the `build` folder.
 https://docs.google.com/document/d/1KWuOkO2jl_K1Btm5iVaqiPt0YM2uUuXNcfYdTMI6ZG0/edit#heading=h.7wggp6wbzt2a
 
 ## Bublic Bank API
-https://apilayer.com/marketplace/exchangerates_data-api
+https://apilayer.com/marketplace/exchangerates_data-api (free and has monthly usage limitation: 100).
 
 Teclology stack [React, Git, html5, styled-components, gh-pages, css3]
 
