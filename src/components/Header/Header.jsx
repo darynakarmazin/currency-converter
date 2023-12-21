@@ -1,12 +1,18 @@
 import { HeaderTag, List, Title } from "./Header.styles";
 
 import { Container } from "../Container/Container.styled";
+import { newDate } from "../../servises/createDate";
 
 function Header({ exchange }) {
+  const date = newDate();
+
   return (
     <HeaderTag>
       <Container>
-        <Title>Currency Conversion</Title>{" "}
+        <div>
+          <Title>Currency Conversion</Title>
+          <p>{date}</p>
+        </div>
         <List>
           {exchange.map((item) => {
             return (
