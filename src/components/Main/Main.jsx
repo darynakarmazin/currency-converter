@@ -7,7 +7,7 @@ function Main({ exchange }) {
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [fromCurrency, setFromCurrency] = useState("");
   const [toCurrency, setToCurrency] = useState("");
-  const [exchngeRate, setExchangeRate] = useState(null);
+  const [exchngeRate, setExchangeRate] = useState(1);
   const [amount, setAmount] = useState(1);
   const [amountInfromCurrency, setAmountInFromCurrency] = useState(true);
 
