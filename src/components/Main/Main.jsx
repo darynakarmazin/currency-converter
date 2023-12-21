@@ -54,7 +54,9 @@ function Main({ exchange }) {
   return (
     <Container>
       <FormWrapper>
-        <h2>Convert</h2>
+        <h2>
+          You will get : {toAmount.toFixed(2)} {toCurrency}
+        </h2>
         <Wrapper>
           <CurrencyRow
             currencyOptions={currencyOptions}
