@@ -22,3 +22,11 @@ Builds the app for production to the `build` folder.
 
 ## Product Requirements Document
 https://docs.google.com/document/d/1KWuOkO2jl_K1Btm5iVaqiPt0YM2uUuXNcfYdTMI6ZG0/edit#heading=h.7wggp6wbzt2a
+
+## Bublic Bank API
+https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json
+
+Teclology stack [React, Git, html5, styled-components, gh-pages, css3]
+
+Main view
+![Main view](https://github.com/darynakarmazin/currency-converter/raw/main/src/images/img-1.png)
