@@ -33,7 +33,6 @@ function Main({ exchange }) {
     const fetchData = async () => {
       try {
         const data = await fetchExchange(fromCurrency, toCurrency);
-        console.log(data);
         setExchangeRate(data.rates[toCurrency]);
       } catch (error) {
         console.error("Error fetching exchange data:", error);

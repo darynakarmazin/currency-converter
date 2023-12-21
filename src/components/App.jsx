@@ -7,13 +7,12 @@ const symbols = "UAH, USD, EUR, PLN, GBP, CZK";
 
 function App() {
   const [exchange, setExchange] = useState([]);
-  console.log(exchange);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await fetchExchange(base, symbols);
-        console.log(data);
+
         let arrayFromObject = Object.entries(data.rates).map(
           ([currency, rate]) => ({ currency, rate })
         );
