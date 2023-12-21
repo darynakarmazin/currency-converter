@@ -9,7 +9,11 @@ function CurrencyRow({
 }) {
   return (
     <InputWraper>
-      <Input type="number" value={amount} onChange={onChangeAmount} />
+      <Input
+        type="number"
+        value={parseFloat(amount).toFixed(2)}
+        onChange={onChangeAmount}
+      />
       <Select value={selectedCurrency} onChange={onChangeCurrency}>
         {currencyOptions.map((option) => (
           <option key={option} value={option}>

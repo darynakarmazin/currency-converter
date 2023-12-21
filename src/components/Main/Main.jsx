@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CurrencyRow from "../CurrencyRow/CurrencyRow";
 import { Container, FormWrapper, Wrapper } from "./Main.styled";
-import { allowedCurrencies } from "../../servises/fetchCurrency";
+import { allowedCurrencies, fetchExchange } from "../../servises/fetchCurrency";
 
 function Main({ exchange }) {
   const [currencyOptions, setCurrencyOptions] = useState([]);
@@ -24,19 +24,23 @@ function Main({ exchange }) {
     if (exchange.length > 0) {
       setCurrencyOptions(allowedCurrencies);
       setFromCurrency("UAH");
-      setToCurrency(exchange[0].cc);
+      setToCurrency(exchange[0].currency);
       setExchangeRate(exchange[0].rate);
     }
   }, [exchange]);
 
   useEffect(() => {
-    if (exchange.length > 0) {
-      const targetExchange = exchange.find((item) => item.cc === toCurrency);
-      if (targetExchange) {
-        setExchangeRate(targetExchange.rate);
+    const fetchData = async () => {
+      try {
+        const data = await fetchExchange(fromCurrency, toCurrency);
+        console.log(data);
+        setExchangeRate(data.rates[toCurrency]);
+      } catch (error) {
+        console.error("Error fetching exchange data:", error);
       }
-    }
-  }, [exchange, toCurrency]);
+    };
+    fetchData();
+  }, [fromCurrency, toCurrency]);
 
   function handleFromAmountChange(e) {
     setAmount(e.target.value);
